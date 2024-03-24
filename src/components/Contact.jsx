@@ -1,10 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <div class="ryker_tm_section" id="contact">
       <div class="ryker_tm_contact">
-        <div class="container">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          class="container"
+        >
           <div class="ryker_tm_title">
             <span>Contact</span>
             <h3>
@@ -51,7 +58,7 @@ const Contact = () => {
           <div class="wrapper">
             <div class="left wow fadeInUp" data-wow-duration="1.5s">
               <div class="fields">
-                <form 
+                <form
                   action="/"
                   method="post"
                   class="contact_form"
@@ -92,7 +99,7 @@ const Contact = () => {
                       Send Message
                     </a>
                   </div>
-                    
+
                   {/* <!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  --> */}
                 </form>
               </div>
@@ -107,7 +114,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

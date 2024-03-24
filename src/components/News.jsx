@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../context";
+import { motion } from "framer-motion";
 
 const News = () => {
   return (
@@ -12,7 +13,12 @@ const News = () => {
           </div>
           <div class="news_list">
             <ul>
-              <li class="wow fadeInUp" data-wow-duration="1.5s">
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                class="wow fadeInUp"
+                data-wow-duration="1.5s"
+              >
                 <div class="list_inner">
                   <div class="image">
                     <img src="../../img/thumbs/4-3.jpg" alt="" />
@@ -79,8 +85,10 @@ const News = () => {
                     </div>
                   </div>
                 </div>
-              </li>
-              <li
+              </motion.li>
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 class="wow fadeInUp"
                 data-wow-duration="1.5s"
                 data-wow-delay="0.2s"
@@ -151,8 +159,10 @@ const News = () => {
                     </div>
                   </div>
                 </div>
-              </li>
-              <li
+              </motion.li>
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 class="wow fadeInUp"
                 data-wow-duration="1.5s"
                 data-wow-delay="0.4s"
@@ -223,7 +233,7 @@ const News = () => {
                     </div>
                   </div>
                 </div>
-              </li>
+              </motion.li>
             </ul>
           </div>
         </div>

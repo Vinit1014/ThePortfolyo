@@ -1,6 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../context";
-
+import { motion } from "framer-motion";
 const Portfolio = () => {
   const { projects } = useGlobalContext();
   console.log(projects);
@@ -17,7 +17,14 @@ const Portfolio = () => {
               <ul class="gallery_zoom">
                 {projects.map((data, index) => {
                   return (
-                    <li class="wow fadeInUp" data-wow-duration="1.5s">
+                    <motion.li
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                      viewport={{ once: true }}
+                      class="wow fadeInUp"
+                      data-wow-duration="1.5s"
+                    >
                       <div class="list_inner">
                         <div class="image">
                           <img src={data.image.url} alt="" />
@@ -35,7 +42,7 @@ const Portfolio = () => {
                           href={data.liveurl}
                         ></a>
                       </div>
-                    </li>
+                    </motion.li>
                   );
                 })}
               </ul>

@@ -6,6 +6,7 @@ const Slidercomp = (props) => {
       label={props.value}
       size="sm"
       hideThumb={true}
+      
       //   step={0.01}
       maxValue={100}
       minValue={0}

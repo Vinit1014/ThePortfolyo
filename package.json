@@ -22,7 +22,8 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.4",
-    "react-typed": "^2.0.12"
+    "react-typed": "^2.0.12",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

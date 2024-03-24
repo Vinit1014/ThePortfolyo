@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Slider } from "@nextui-org/react";
 import Slidercomp from "./Slidercomp";
 import { useGlobalContext } from "../context";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const [servicesData, setServices] = useState();
@@ -43,10 +44,16 @@ const Services = () => {
             <div class="right grid grid-rows-3 grid-flow-col gap-6">
               {services.map((data, index) => {
                 return (
-                  <div class="list_inner">
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    class="list_inner"
+                  >
                     <img class="svg" src={data.image.url} alt="" />
                     <h3 class="title">{data.name}</h3>
-                  </div>
+                  </motion.div>
                 );
               })}
               {/* <div class="list_inner">

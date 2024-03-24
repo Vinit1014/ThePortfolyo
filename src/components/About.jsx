@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../context";
+import { motion } from "framer-motion";
 const About = () => {
   const [aboutData, setAbout] = useState({});
   const { about } = useGlobalContext();
@@ -15,7 +16,14 @@ const About = () => {
       <div class="ryker_tm_about">
         <div class="container">
           <div class="about_inner">
-            <div class="left wow fadeInLeft" data-wow-duration="1.5s">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              class="left wow fadeInLeft"
+              data-wow-duration="1.5s"
+            >
               <div class="image">
                 <img src="../../img/thumbs/1-1.jpg" alt="" />
                 <div class="main" data-img-url="../../img/about/2.jpg">
@@ -57,8 +65,15 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="right wow fadeInRight" data-wow-duration="1.5s">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              class="right wow fadeInRight"
+              data-wow-duration="1.5s"
+            >
               <div class="ryker_tm_title">
                 <span>About Me</span>
                 <h3>{about.subTitle}</h3>
@@ -72,7 +87,7 @@ const About = () => {
               <div class="ryker_tm_button">
                 <a href="#">Download CV</a>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

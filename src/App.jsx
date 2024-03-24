@@ -13,14 +13,14 @@ import Testimonials from "./components/Testimonials";
 import News from "./components/News";
 import Contact from "./components/Contact";
 import Copyright from "./components/Copyright";
+import { motion } from "framer-motion";
 
 export const API_URL =
   "https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae";
 function App() {
   const [loading, setLoading] = useState(true);
+  
   useEffect(() => {
-    // Simulate loading delay
-    // getUserData(API_URL);
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 2000);
