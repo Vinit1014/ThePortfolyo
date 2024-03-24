@@ -21,11 +21,7 @@ const Hero = () => {
                 <video playsinline autoplay muted loop>
                   <source src="video/1.mp4" type="video/mp4" />
                 </video>
-                <h3>
-                  {/* Senior Designer<br />
-                    &amp; Developer */}
-                  {aboutData.title}
-                </h3>
+                <h3>{aboutData.title}</h3>
               </div>
               <div class="desc">
                 <p>
@@ -50,18 +46,6 @@ const Hero = () => {
                         </li>
                       );
                     })}
-                    {/* <li>
-                      <img class="svg" src="img/svg/html.svg" alt="" />
-                    </li>
-                    <li>
-                      <img class="svg" src="img/svg/css.svg" alt="" />
-                    </li>
-                    <li>
-                      <img class="svg" src="img/svg/angular.svg" alt="" />
-                    </li>
-                    <li>
-                      <img class="svg" src="img/svg/bootstrap.svg" alt="" />
-                    </li> */}
                   </ul>
                 </div>
               </div>
